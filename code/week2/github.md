@@ -8,9 +8,7 @@ Open the terminal on the AWS instance and run the following commands:
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/kontr0x/github-desktop-install/main/installGitHubDesktop.sh)"
 ```
 
-Open GitHub Desktop on the AWS instance, and click sign in 
-
-OR Download GitHub Desktop on your local machine from [here](https://desktop.github.com/) then click sign in.
+Open GitHub Desktop on the AWS instance, and click sign in.
 
 If you don't have a GitHub Account, please create one using your numbered BYU-I email.
 

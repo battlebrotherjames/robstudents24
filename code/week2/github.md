@@ -34,7 +34,7 @@ cd code
 mkdir week{2..10}
 mkdir final_project
 ```
-Explanation: The `cd` command changes the directory to the `itm111` folder on the desktop. The `mkdir` command creates folders for weeks 2 through 10 and the final project.
+Explanation: The `cd` command changes directories. The `mkdir` command creates folders.
 
 Any files you want to have access to outside the instance, copy them to the `itm111` folder on the desktop. Open GitHub Desktop and click on the `Changes` tab. You should see the files you copied to the `itm111` folder.
 

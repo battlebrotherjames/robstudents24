@@ -26,6 +26,17 @@ Now we need to create a repository on GitHub. Click on the `Publish Repository` 
 
 Name the repository `itm111` and add a description if you'd like. Make sure the repository is private and click the `Publish Repository` button.
 
+We need to create folders to help keep ourselves organized. Open the terminal on the AWS instance and run the following commands one at a time:
+
+```bash
+# assuming you put the repo on the desktop
+cd ~/Desktop/itm111
+
+mkdir week{2..10}
+mkdir final_project
+```
+Explanation: The `cd` command changes the directory to the `itm111` folder on the desktop. The `mkdir` command creates folders for weeks 2 through 10 and the final project.
+
 Any files you want to have access to outside the instance, copy them to the `itm111` folder on the desktop. Open GitHub Desktop and click on the `Changes` tab. You should see the files you copied to the `itm111` folder.
 
 Add a summary of the changes in the `Summary` box and click the `Commit to main` button.

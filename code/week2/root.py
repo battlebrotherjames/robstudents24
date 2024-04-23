@@ -17,7 +17,7 @@ directory = os.getcwd()
 # check to see what system I'm using
 name = platform.system()
 if name == 'Linux' or name == 'Darwin':
-    filename = f"{directory}/code/week1/root.sql"
+    filename = f"{directory}/code/week2/root.sql"
 elif name == 'Windows':
     filename = f"{directory}\\root.sql"
 

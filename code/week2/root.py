@@ -1,6 +1,7 @@
 import mysql.connector
 import os
 import platform
+import subprocess
 
 # connect to root user
 mydb = mysql.connector.connect(
@@ -18,8 +19,19 @@ directory = os.getcwd()
 name = platform.system()
 if name == 'Linux' or name == 'Darwin':
     filename = f"{directory}/code/week2/root.sql"
+    run_git = input("Would you like to run the github desktop script? (y/n): ")
+    if run_git == 'y':
+        subprocess.run(["bash", f"{directory}/code/week2/github.sh"])
+    else:
+        print("Skipping github desktop script")
+
 elif name == 'Windows':
     filename = f"{directory}\\root.sql"
+    run_git = input("Would you like to run the github desktop script? (y/n): ")
+    if run_git == 'y':
+        subprocess.run(["powershell", f"{directory}\\github.ps1"])
+    else:
+        print("Skipping github desktop script")
 
 with open(filename, 'r+') as file:
     sqlFile = file.read()
@@ -38,6 +50,8 @@ with open(filename, 'r+') as file:
 
 # close the connection
 mydb.close()
+
+# add option to run github desktop script
 
 # connect to the new user
 student = mysql.connector.connect(

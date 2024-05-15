@@ -24,6 +24,11 @@ if name == 'Linux' or name == 'Darwin':
         subprocess.run(["bash", f"{directory}/code/week2/github.sh"])
     else:
         print("Skipping github desktop script")
+    run_file = input("Would you like to run the file setup script? (y/n): ")
+    if run_file == 'y':
+        subprocess.run(["bash", f"{directory}/code/week2/file_setup.sh"])
+    else:
+        print("Skipping file setup script")
 
 elif name == 'Windows':
     filename = f"{directory}\\root.sql"
@@ -32,6 +37,11 @@ elif name == 'Windows':
         subprocess.run(["powershell", f"{directory}\\github.ps1"])
     else:
         print("Skipping github desktop script")
+    run_file = input("Would you like to run the file setup script? (y/n): ")
+    if run_file == 'y':
+        subprocess.run(["powershell", f"{directory}\\file_setup.ps1"])
+    else:
+        print("Skipping file setup script")
 
 with open(filename, 'r+') as file:
     sqlFile = file.read()

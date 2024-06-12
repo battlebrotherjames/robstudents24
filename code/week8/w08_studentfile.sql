@@ -147,7 +147,7 @@ USE bike; -- for first 2 queries, magazine for last 2.
 -- Show the cust_order_id and using today's date. 
 -- How long in years, ROUNDED to the nearest year, 
 -- has it been since the product shipped.
--- 1st step
+-- 1st step - Find the columns and have correct number of columns for the query
 SELECT cust_order_id
 ,      shipped_date
 ,      shipped_date AS 'Years Since Shipped'
@@ -186,7 +186,7 @@ FROM   cust_order;
 -- Format that date so it takes the format of Month name, 
 -- number day with comma and then a 4 digit year like: 
 -- January 4, 2019
--- 1st step
+-- 1st step - Find the columns and have correct number of columns for the query
 
 -- 2nd step
 
@@ -200,7 +200,7 @@ USE magazine;
 -- Find any string with 'Ma' in it,
 -- we want to take from that word on and 
 -- take it off the magazine name
--- 1st step
+-- 1st step - Find the columns and have correct number of columns for the query
 
 -- 2nd step. Find only those with 'Ma' in it
 

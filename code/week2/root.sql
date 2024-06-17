@@ -26,5 +26,8 @@ GRANT ALL ON church.* TO 'student'@'localhost';
 GRANT ALL ON film.* TO 'student'@'localhost';
 -- ~
 -- ~
+GRANT ALL ON joins.* TO 'student'@'localhost';
+-- ~
+-- ~
 GRANT ALL ON university.* TO 'student'@'localhost';
 -- ~

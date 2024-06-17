@@ -34,7 +34,9 @@
 --  USING() "clause/function"
 -- We can use the USING "clause/function"
 -- only when the primary and foreign keys
--- have the same name.  
+-- have the same name. 
+-- THIS IS ONLY FOR YOUR INFORMATION 
+-- DO NOT USE USING IN YOUR QUERIES
 -- ***************************************
 
 SELECT     fname

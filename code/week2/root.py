@@ -17,7 +17,7 @@ mydb = mysql.connector.connect(
 directory = os.getcwd()
 # check to see what system I'm using
 name = platform.system()
-if name == 'Linux' or name == 'Darwin':
+if name == 'Linux':
     filename = f"/home/student/Desktop/robstudents24/code/week2/root.sql"
     run_git = input("Would you like to run the github desktop script? (y/n): ")
     if run_git == 'y':
@@ -27,6 +27,19 @@ if name == 'Linux' or name == 'Darwin':
     run_file = input("Would you like to run the file setup script? (y/n): ")
     if run_file == 'y':
         subprocess.run(["bash", f"{directory}/code/week2/file_setup.sh"])
+    else:
+        print("Skipping file setup script")
+
+elif name == 'Darwin':
+    filename = f"{directory}/root.sql"
+    run_git = input("Would you like to run the github desktop script? (y/n): ")
+    if run_git == 'y':
+        subprocess.run(["bash", f"{directory}/github.sh"])
+    else:
+        print("Skipping github desktop script")
+    run_file = input("Would you like to run the file setup script? (y/n): ")
+    if run_file == 'y':
+        subprocess.run(["bash", f"{directory}/file_setup.sh"])
     else:
         print("Skipping file setup script")
 

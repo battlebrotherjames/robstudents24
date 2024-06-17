@@ -170,7 +170,7 @@ ON         aw.artwork_id = awk.artwork_id
 INNER JOIN keyword k
 ON         awk.keyword_id = k.keyword_id;
 
--- Common Error: missing the table alias. Throws an ambiguity error. Add the table name 'aw' or 'artwork'
+-- Common Error: missing the table alias. Throws an ambiguity error. Add the table alias 'aw.'
 SELECT     title
 ,          period
 ,          keyword

@@ -25,16 +25,14 @@
 -- 1.2 Look at artist_id in the artwork table
 
 -- 1.3 A list of all the artists with each of their art works 
--- (can demonstrate alias's and USING() if you'd like here, 
--- but realize the USING clause isn't universal for all RDBMS 
--- and there are some limitations with USING. 
--- That is why we teach with ON not USING) 
 
 -- ***************************************
 --  USING() "clause/function"
 -- We can use the USING "clause/function"
 -- only when the primary and foreign keys
 -- have the same name. 
+-- The USING clause isn't universal for all RDBMS 
+-- and there are some limitations with USING.
 -- THIS IS ONLY FOR YOUR INFORMATION 
 -- DO NOT USE USING IN YOUR QUERIES
 -- ***************************************

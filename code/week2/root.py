@@ -18,7 +18,7 @@ directory = os.getcwd()
 # check to see what system I'm using
 name = platform.system()
 if name == 'Linux' or name == 'Darwin':
-    filename = f"{directory}/code/week2/root.sql"
+    filename = f"/home/student/Desktop/robstudents24/code/week2/root.sql"
     run_git = input("Would you like to run the github desktop script? (y/n): ")
     if run_git == 'y':
         subprocess.run(["bash", f"{directory}/code/week2/github.sh"])

@@ -179,3 +179,14 @@ INNER JOIN artwork_keyword awk
 ON         artwork_id = awk.artwork_id
 INNER JOIN keyword k
 ON         awk.keyword_id = k.keyword_id;
+
+-- Common Error: Query runs but no results are found. Most likely, you are trying to use a string column in the ON clause.
+USE magazine;
+SELECT    magazineName
+,         subscriberFirstName
+,         subscriberLastName
+FROM      magazine m
+INNER JOIN subscription s
+ON        m.magazineName = s.magazineKey
+INNER JOIN subscriber sr
+ON        s.subscriberKey = sr.subscriberKey;

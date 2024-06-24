@@ -25,16 +25,16 @@
 -- 1.2 Look at artist_id in the artwork table
 
 -- 1.3 A list of all the artists with each of their art works 
--- (can demonstrate alias's and USING() if you'd like here, 
--- but realize the USING clause isn't universal for all RDBMS 
--- and there are some limitations with USING. 
--- That is why we teach with ON not USING) 
 
 -- ***************************************
 --  USING() "clause/function"
 -- We can use the USING "clause/function"
 -- only when the primary and foreign keys
--- have the same name.  
+-- have the same name. 
+-- The USING clause isn't universal for all RDBMS 
+-- and there are some limitations with USING.
+-- THIS IS ONLY FOR YOUR INFORMATION 
+-- DO NOT USE USING IN YOUR QUERIES
 -- ***************************************
 
 SELECT     fname
@@ -170,7 +170,7 @@ ON         aw.artwork_id = awk.artwork_id
 INNER JOIN keyword k
 ON         awk.keyword_id = k.keyword_id;
 
--- Common Error: missing the table alias. Throws an ambiguity error. Add the table name 'aw' or 'artwork'
+-- Common Error: missing the table alias. Throws an ambiguity error. Add the table alias 'aw.'
 SELECT     title
 ,          period
 ,          keyword
@@ -179,3 +179,14 @@ INNER JOIN artwork_keyword awk
 ON         artwork_id = awk.artwork_id
 INNER JOIN keyword k
 ON         awk.keyword_id = k.keyword_id;
+
+-- Common Error: Query runs but no results are found. Most likely, you are trying to use a string column in the ON clause.
+USE magazine;
+SELECT    magazineName
+,         subscriberFirstName
+,         subscriberLastName
+FROM      magazine m
+INNER JOIN subscription s
+ON        m.magazineName = s.magazineKey
+INNER JOIN subscriber sr
+ON        s.subscriberKey = sr.subscriberKey;

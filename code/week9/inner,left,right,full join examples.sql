@@ -62,7 +62,7 @@ LEFT JOIN artwork aw
 ON a.artist_id = aw.artist_id;
 
 
--- FULL OUTER JOIN (REQUIRES UNION)
+-- FULL OUTER JOIN (REQUIRES UNION) UNIONS SHOULD NOT BE USED IN THIS CLASS
 SELECT fname, lname, title
 FROM artist a
 RIGHT JOIN artwork aw

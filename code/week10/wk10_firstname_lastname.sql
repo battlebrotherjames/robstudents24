@@ -12,6 +12,10 @@ USE bike;
 -- 2. Show each bike that needs to be reordered
 --    (those bikes that are out of stock).
 --    Filter the results to only the lowest quantity of zero.
+--    Order by product_name.
+--    (hint for this one: 
+--     Two different stores have the same bike that needs to be reordered
+--     , you only need it to show up once.)
 -- -------------------------------------------------------------------------------------------
 
 

@@ -1,3 +1,5 @@
+-- your column names may not match mine
+-- This can be used, but make sure you use your column names
 INSERT INTO enrollment
 (person_id, section_id, role_id)
 VALUES
